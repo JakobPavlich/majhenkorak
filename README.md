@@ -1,6 +1,6 @@
-# Majhen Korak
+# Majhen Korak (small step)
 
-A Rails application built as my first Boot.dev project. :balloon: :computer:
+An small Ruby on Rails application built as my first Boot.dev project. :computer: :seedling: :balloon:
 
 ## Stack
 
