@@ -90,6 +90,7 @@ production:
     database: majhenkorak_production
     username: majhenkorak
     password: <%= ENV["MAJHENKORAK_DATABASE_PASSWORD"] %>
+    host: majhenkorak-db
   cache:
     <<: *primary_production
     database: majhenkorak_production_cache
