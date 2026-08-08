@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Playwrite";
+  src: local(Playwrite), url(pisano-zvezek.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.domov h1 {
+  font-family: "Playwrite", serif;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.wrapper {
+  padding-inline: 1rem;
+  max-inline-size: 900px;
+  margin-inline: auto;
+}
