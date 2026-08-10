@@ -19,6 +19,11 @@ body {
 
 .wrapper {
   padding-inline: 1rem;
-  max-inline-size: 900px;
+  max-inline-size: 500px;
   margin-inline: auto;
+}
+
+img {
+  max-inline-size: 100%;
+  display: block;
 }
