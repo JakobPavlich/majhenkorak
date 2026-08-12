@@ -6,15 +6,22 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --bg: #14213a;
+}
 
+html,
 body {
   margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
 }
 
 .domov h1 {
   font-family: "Playwrite", serif;
   text-align: center;
   font-size: 3rem;
+  color: hsla(242, 83%, 86%, 0.808);
 }
 
 .wrapper {
@@ -26,4 +33,36 @@ body {
 img {
   max-inline-size: 100%;
   display: block;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(111, 104, 238, 0.38),
+      transparent 42%
+    ),
+    radial-gradient(circle at 82% 24%, rgb(45 212 191 / 0.38), transparent 38%),
+    radial-gradient(circle at 55% 82%, rgba(37, 165, 39, 0.22), transparent 45%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  background: white;
+  opacity: 0.05;
+  mix-blend-mode: soft-light;
+
+  filter: url("#noise");
 }

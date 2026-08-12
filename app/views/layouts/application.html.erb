@@ -24,8 +24,31 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <%= yield %>
+    <svg
+      width="0"
+      height="0"
+      style="position: absolute"
+      aria-hidden="true"
+    >
+      <filter id="noise">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.8"
+          numOctaves="4"
+          stitchTiles="stitch"
+        />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+    </svg>
+    <div class="ambient-background" data-controller="ambient">
+      <div class="ambient-light ambient-light--indigo" data-ambient-target="indigo"></div>
+      <div class="ambient-light ambient-light--teal" data-ambient-target="teal"></div>
+      <div class="ambient-light ambient-light--peach" data-ambient-target="peach"></div>
+    </div>
+    <div class="background">
+      <div class="wrapper">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
