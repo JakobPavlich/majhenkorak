@@ -29,6 +29,10 @@ ENV RAILS_ENV="production" \
 
 # Throw-away build stage to reduce size of final image
 FROM base AS build
+# Install Node.js and npm for JavaScript builds
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y nodejs npm && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
@@ -46,6 +50,7 @@ RUN bundle install && \
 
 # Copy application code
 COPY . .
+RUN npm ci
 
 # Precompile bootsnap code for faster boot times.
 # -j 1 disable parallel compilation to avoid a QEMU bug: https://github.com/rails/bootsnap/issues/495
