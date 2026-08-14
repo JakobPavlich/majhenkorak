@@ -1,6 +1,14 @@
 @font-face {
   font-family: "Playwrite";
-  src: local(Playwrite), url(pisano-zvezek.ttf);
+  src: local(Playwrite), url(pisano-zvezek.woff2);
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bitcount Prop Single";
+  src: url("BitcountPropSingle-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -26,7 +34,8 @@ body {
 }
 
 .domov h1 {
-  font-family: "Playwrite", serif;
+  font-family: "Bitcount Prop Single", sans-serif;
+  font-weight: 300;
   text-align: center;
   font-size: 3rem;
   color: hsla(242, 83%, 86%, 0.808);
@@ -63,6 +72,8 @@ body::before {
 .ambient-background {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100dvh;
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
@@ -71,28 +82,35 @@ body::before {
 
 .ambient-light {
   position: absolute;
-  width: 60vw;
-  height: 60vw;
+  /* width: max(60vw, 60vh);
+  height: max(60vw, 60vh); */
   border-radius: 50%;
   filter: blur(80px);
 }
+@media (max-width: 600px) {
+  .ambient-light {
+    width: max(60vw, 60vh);
+    height: max(60vw, 60vh);
+    filter: blur(60px);
+  }
+}
 
 .ambient-light--indigo {
-  top: -20%;
-  left: -10%;
+  top: -10%;
+  left: -15%;
   background: rgb(79 70 229 / 0.28);
 }
 
 .ambient-light--teal {
-  top: -15%;
+  top: -8%;
   right: -15%;
   background: rgb(45 212 191 / 0.18);
 }
 
 .ambient-light--peach {
-  bottom: -20%;
+  bottom: -10%;
   left: 25%;
-  background: rgb(245 158 139 / 0.22);
+  background: rgb(55 100 45 / 0.28);
 }
 
 body::after {

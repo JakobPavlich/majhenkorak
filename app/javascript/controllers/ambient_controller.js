@@ -10,8 +10,8 @@ export default class extends Controller {
   }
   animate() {
     gsap.to(this.indigoTarget, {
-      x: 100,
-      y: 60,
+      x: "15vw",
+      y: "8vh",
       duration: 8,
       scale: 1.1,
       ease: "sine.inOut",
@@ -20,8 +20,8 @@ export default class extends Controller {
     });
 
     gsap.to(this.tealTarget, {
-      x: -70,
-      y: 90,
+      x: "-12vw",
+      y: "10vh",
       duration: 10,
       scale: 1.15,
       delay: 2,
@@ -31,8 +31,8 @@ export default class extends Controller {
     });
 
     gsap.to(this.peachTarget, {
-      x: 80,
-      y: -100,
+      x: "15vw",
+      y: "-12vh",
       duration: 12,
       delay: 4,
       ease: "sine.inOut",
