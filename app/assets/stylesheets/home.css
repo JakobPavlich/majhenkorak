@@ -34,11 +34,12 @@ body {
 }
 
 .domov h1 {
-  font-family: "Bitcount Prop Single", sans-serif;
+  font-family: "Bitcount Prop Single", system-ui, sans-serif;
   font-weight: 300;
   text-align: center;
   font-size: 3rem;
-  color: hsla(242, 83%, 86%, 0.808);
+  color: hsla(242, 83%, 86%, 0.856);
+  margin-bottom: 0;
 }
 
 .wrapper {
@@ -50,6 +51,13 @@ body {
 img {
   max-inline-size: 100%;
   display: block;
+}
+.domov img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  margin-inline: auto;
 }
 
 body::before {
@@ -82,15 +90,15 @@ body::before {
 
 .ambient-light {
   position: absolute;
-  /* width: max(60vw, 60vh);
-  height: max(60vw, 60vh); */
+  width: max(60vw, 60vh);
+  height: max(60vw, 60vh);
   border-radius: 50%;
   filter: blur(80px);
 }
 @media (max-width: 600px) {
   .ambient-light {
-    width: max(60vw, 60vh);
-    height: max(60vw, 60vh);
+    /* width: max(60vw, 60vh);
+    height: max(60vw, 60vh); */
     filter: blur(60px);
   }
 }
