@@ -2,5 +2,16 @@
     <h1>MAJHEN KORAK</h1>
     <%# <%= image_tag "grow.svg", alt: "grow, from SVG course frontendmasters.com" %>
     <%# <%= image_tag "proba.svg", alt: "samo prva inkscape proba" %>
-    <%= image_tag "drevo1.png", alt: "drevo" %>
+    <%# <%= image_tag "drevo1.png", alt: "drevo" %>
+    <div
+        class="tree-scene"
+        data-controller="snow"
+        data-snow-count-value="40"
+        >
+        <div class="snow-back" data-snow-target="back"></div>
+
+        <div class="tree"></div>
+
+        <div class="snow-front" data-snow-target="front"></div>
+    </div>
 </div>

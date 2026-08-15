@@ -299,8 +299,24 @@
       ],
       "format": "esm"
     },
+    "app/javascript/controllers/snow_controller.js": {
+      "bytes": 1626,
+      "imports": [
+        {
+          "path": "node_modules/@hotwired/stimulus/dist/stimulus.js",
+          "kind": "import-statement",
+          "original": "@hotwired/stimulus"
+        },
+        {
+          "path": "node_modules/gsap/index.js",
+          "kind": "import-statement",
+          "original": "gsap"
+        }
+      ],
+      "format": "esm"
+    },
     "app/javascript/controllers/index.js": {
-      "bytes": 245,
+      "bytes": 342,
       "imports": [
         {
           "path": "app/javascript/controllers/application.js",
@@ -311,6 +327,11 @@
           "path": "app/javascript/controllers/ambient_controller.js",
           "kind": "import-statement",
           "original": "./ambient_controller"
+        },
+        {
+          "path": "app/javascript/controllers/snow_controller.js",
+          "kind": "import-statement",
+          "original": "./snow_controller"
         }
       ],
       "format": "esm"
@@ -337,7 +358,7 @@
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 887878
+      "bytes": 891086
     },
     "app/assets/builds/application.js": {
       "imports": [],
@@ -410,14 +431,17 @@
         "app/javascript/controllers/ambient_controller.js": {
           "bytesInOutput": 722
         },
+        "app/javascript/controllers/snow_controller.js": {
+          "bytesInOutput": 1623
+        },
         "app/javascript/controllers/index.js": {
-          "bytesInOutput": 61
+          "bytesInOutput": 116
         },
         "app/javascript/application.js": {
           "bytesInOutput": 0
         }
       },
-      "bytes": 449708
+      "bytes": 451436
     }
   }
 }

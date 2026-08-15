@@ -136,3 +136,56 @@ body::after {
 
   filter: url("#noise");
 }
+.tree-scene {
+  position: relative;
+  width: 180px;
+  height: 300px;
+  margin-inline: auto;
+}
+
+.snow-front,
+.snow-back {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.snow-back {
+  z-index: 1;
+}
+
+.tree {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background: url("sprite-drevo.png") no-repeat;
+  image-rendering: pixelated;
+
+  animation: sway 1.4s steps(6) infinite;
+}
+
+.snow-front {
+  z-index: 3;
+}
+
+.snowflake {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  border-radius: 50%;
+  background: white;
+
+  z-index: 10;
+}
+@keyframes sway {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -1080px;
+  }
+}
