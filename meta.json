@@ -300,7 +300,7 @@
       "format": "esm"
     },
     "app/javascript/controllers/snow_controller.js": {
-      "bytes": 1626,
+      "bytes": 1629,
       "imports": [
         {
           "path": "node_modules/@hotwired/stimulus/dist/stimulus.js",
@@ -358,7 +358,7 @@
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 891086
+      "bytes": 891043
     },
     "app/assets/builds/application.js": {
       "imports": [],
@@ -432,7 +432,7 @@
           "bytesInOutput": 722
         },
         "app/javascript/controllers/snow_controller.js": {
-          "bytesInOutput": 1623
+          "bytesInOutput": 1571
         },
         "app/javascript/controllers/index.js": {
           "bytesInOutput": 116
@@ -441,7 +441,7 @@
           "bytesInOutput": 0
         }
       },
-      "bytes": 451436
+      "bytes": 451384
     }
   }
 }

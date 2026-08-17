@@ -11,7 +11,7 @@ export default class extends Controller {
   connect() {
     console.log("SNOW CONNECTED");
     console.log("count:", this.countValue);
-    const size = gsap.utils.random(1, 3, 0);
+    // const size = gsap.utils.random(1, 3, 0);
     this.createSnow(this.frontTarget, this.countValue / 2, 3, 4, 8);
     this.createSnow(this.backTarget, this.countValue / 2, 2, 8, 12);
   }
