@@ -38,8 +38,10 @@ body {
   font-weight: 300;
   text-align: center;
   font-size: 3rem;
-  color: hsla(242, 83%, 86%, 0.856);
+  color: hsla(240, 25%, 97%, 0.556);
   margin-bottom: 0;
+  background-color: hsla(243, 75%, 89%, 0.074);
+  border-radius: 30px;
   /* padding-top: 30px; */
 }
 
