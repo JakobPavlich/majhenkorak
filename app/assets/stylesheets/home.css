@@ -38,9 +38,16 @@ body {
   font-weight: 300;
   text-align: center;
   font-size: 3rem;
-  color: hsla(240, 25%, 97%, 0.556);
+  color: hsl(240, 25%, 97%);
   margin-bottom: 0;
   background-color: hsla(243, 75%, 89%, 0.074);
+  /* background: #0c145e; */
+  background: radial-gradient(
+    circle,
+    rgba(110, 116, 169, 0.228) 0%,
+    rgba(156, 176, 187, 0.237) 50%,
+    rgba(89, 67, 216, 0.084) 100%
+  );
   border-radius: 30px;
   /* padding-top: 30px; */
 }
@@ -102,26 +109,26 @@ body::before {
   .ambient-light {
     /* width: max(60vw, 60vh);
     height: max(60vw, 60vh); */
-    filter: blur(60px);
+    filter: blur(50px);
   }
 }
 
 .ambient-light--indigo {
   top: -10%;
   left: -15%;
-  background: rgb(79 70 229 / 0.28);
+  background: rgba(184, 70, 229, 0.28);
 }
 
 .ambient-light--teal {
   top: -8%;
   right: -15%;
-  background: rgb(45 212 191 / 0.18);
+  background: rgba(200, 230, 32, 0.18);
 }
 
 .ambient-light--peach {
   bottom: -10%;
   left: 25%;
-  background: rgb(55 100 45 / 0.28);
+  background: rgba(118, 136, 160, 0.3);
 }
 
 body::after {
