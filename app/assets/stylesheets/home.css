@@ -56,6 +56,7 @@ body {
   padding-inline: 1rem;
   max-inline-size: 500px;
   margin-inline: auto;
+  text-align: center;
 }
 
 img {
@@ -173,6 +174,20 @@ body::after {
 
   animation: sway 1.4s steps(6) infinite;
 }
+.korak {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  margin-inline: auto;
+
+  background: url("korak-proba.png") no-repeat;
+  image-rendering: pixelated;
+}
+
+.korak:hover,
+.korak:active {
+  background: url("korak-hover.png") no-repeat;
+}
 
 .snow-front {
   z-index: 3;
@@ -197,4 +212,17 @@ body::after {
   to {
     background-position-x: -1080px;
   }
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  font-size: 2rem;
+  color: aliceblue;
+  width: 180px;
+  /* margin-left: -20px; */
+}
+
+.link:active, .link:hover {
+  color: rgb(59, 170, 218);
 }

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "pages#home"
+  get "korak1" => "pages#korak1"
 end

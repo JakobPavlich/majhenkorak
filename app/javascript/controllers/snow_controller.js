@@ -65,4 +65,11 @@ export default class extends Controller {
       ease: "sine.inOut",
     });
   }
+  disconnect() {
+    gsap.killTweensOf(this.frontTarget.querySelectorAll(".snowflake"));
+    gsap.killTweensOf(this.backTarget.querySelectorAll(".snowflake"));
+
+    this.frontTarget.replaceChildren();
+    this.backTarget.replaceChildren();
+  }
 }
