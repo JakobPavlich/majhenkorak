@@ -3,6 +3,7 @@
 An small Ruby on Rails application built as my first Boot.dev project. :computer: :seedling: :balloon:
 
 It lives [up here](https://www.majhenkorak.si/)
+
 ![screenshot](app/assets/images/screenshot1.jpg)
 
 ## Stack
