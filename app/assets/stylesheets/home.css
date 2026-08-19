@@ -39,7 +39,7 @@ body {
   text-align: center;
   font-size: 3rem;
   color: hsl(240, 25%, 97%);
-  margin-bottom: 0;
+  margin: 0;
   background-color: hsla(243, 75%, 89%, 0.074);
   /* background: #0c145e; */
   background: radial-gradient(
@@ -53,12 +53,21 @@ body {
 }
 
 .wrapper {
-  padding-inline: 1rem;
   max-inline-size: 500px;
+  /* padding-inline: 5px;
+  padding-block: 10px;
+  margin-inline: auto;
+  margin-block: 10px; */
+  margin-block: 10px;
   margin-inline: auto;
   text-align: center;
+  /* background-color: hsla(0, 0%, 77%, 0.059); */
+  /* border-radius: 20px; */
+  min-height: 300px;
 }
-
+.background {
+  padding-inline: 10px;
+}
 img {
   max-inline-size: 100%;
   display: block;
@@ -226,4 +235,8 @@ body::after {
 .link:active,
 .link:hover {
   color: rgb(59, 170, 218);
+}
+
+.turbo-progress-bar {
+  background-color: rgb(253, 254, 253);
 }

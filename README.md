@@ -18,6 +18,6 @@ It lives [up here](https://www.majhenkorak.si/)
 
 For the time being this is just a place to try out some of the stuff I learned so far, and not yet a polished app with a specific purpose :blush:
 
-So far just setting up the server, getting a domain, figuring out what DNS is, using Docker and Kamal for the first time...
+So far just setting up the server, getting a domain, figuring out what DNS is, using Docker and Kamal for the first time...trying also to draw sprites for the first time and animating them...
 
 I don't recommend anyone to clone it, I can't quite see how it would be useful that way.

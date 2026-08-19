@@ -9,8 +9,6 @@ export default class extends Controller {
   };
 
   connect() {
-    console.log("SNOW CONNECTED");
-    console.log("count:", this.countValue);
     // const size = gsap.utils.random(1, 3, 0);
     this.createSnow(this.frontTarget, this.countValue / 2, 4, 8);
     this.createSnow(this.backTarget, this.countValue / 2, 8, 12);
@@ -38,6 +36,7 @@ export default class extends Controller {
 
     gsap.set(flake, {
       left: gsap.utils.random(0, 180),
+      top: -300,
       top: gsap.utils.random(-300, 0),
     });
 
