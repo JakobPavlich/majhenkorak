@@ -36,7 +36,6 @@ export default class extends Controller {
 
     gsap.set(flake, {
       left: gsap.utils.random(0, 180),
-      top: -300,
       top: gsap.utils.random(-300, 0),
     });
 
