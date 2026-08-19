@@ -180,14 +180,14 @@ body::after {
   height: 200px;
   margin-inline: auto;
 
-  background: url("korak-proba.png") no-repeat;
+  background: url("korak-hover.png") no-repeat;
   image-rendering: pixelated;
 }
 
-.korak:hover,
+/* .korak:hover,
 .korak:active {
   background: url("korak-hover.png") no-repeat;
-}
+} */
 
 .snow-front {
   z-index: 3;
@@ -195,7 +195,7 @@ body::after {
 
 .snowflake {
   position: absolute;
-
+  will-change: transform;
   left: 0;
   top: 0;
 
@@ -223,6 +223,7 @@ body::after {
   /* margin-left: -20px; */
 }
 
-.link:active, .link:hover {
+.link:active,
+.link:hover {
   color: rgb(59, 170, 218);
 }

@@ -12,11 +12,11 @@ export default class extends Controller {
     console.log("SNOW CONNECTED");
     console.log("count:", this.countValue);
     // const size = gsap.utils.random(1, 3, 0);
-    this.createSnow(this.frontTarget, this.countValue / 2, 3, 4, 8);
-    this.createSnow(this.backTarget, this.countValue / 2, 2, 8, 12);
+    this.createSnow(this.frontTarget, this.countValue / 2, 4, 8);
+    this.createSnow(this.backTarget, this.countValue / 2, 8, 12);
   }
 
-  createSnow(container, amount, size, minSpeed, maxSpeed) {
+  createSnow(container, amount, minSpeed, maxSpeed) {
     console.log("creating", amount, "flakes");
 
     for (let i = 0; i < amount; i++) {
@@ -42,12 +42,12 @@ export default class extends Controller {
     });
 
     gsap.to(flake, {
-      top: 330,
+      y: 330,
       duration,
       ease: "none",
       repeat: -1,
       modifiers: {
-        top: (value) => {
+        y: (value) => {
           if (parseFloat(value) >= 330) {
             return `${gsap.utils.random(-300, -20)}px`;
           }
