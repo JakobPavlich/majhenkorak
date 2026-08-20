@@ -119,7 +119,7 @@ body::before {
   .ambient-light {
     /* width: max(60vw, 60vh);
     height: max(60vw, 60vh); */
-    filter: blur(50px);
+    filter: blur(70px);
   }
 }
 
@@ -181,7 +181,7 @@ body::after {
   background: url("sprite-drevo.png") no-repeat;
   image-rendering: pixelated;
 
-  animation: sway 1.4s steps(6) infinite;
+  animation: sway 3.2s steps(6) infinite;
 }
 .korak {
   position: relative;
