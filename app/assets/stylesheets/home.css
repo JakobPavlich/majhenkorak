@@ -187,13 +187,28 @@ body::after {
   animation: sway 3.2s steps(6) infinite;
 }
 .korak {
-  position: relative;
-  width: 180px;
-  height: 200px;
-  margin-inline: auto;
+  position: absolute;
 
-  background: url("korak-hover.png") no-repeat;
+  width: 180px;
+  height: 180px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: url("sprite-korak.png") no-repeat;
   image-rendering: pixelated;
+  background-size: 1620px auto;
+
+  animation: path 14s steps(8) forwards;
+}
+@keyframes path {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -1440px 0;
+  }
 }
 
 /* .korak:hover,
