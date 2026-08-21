@@ -6,7 +6,11 @@ export default class extends Controller {
   static targets = ["indigo", "teal", "peach"];
 
   connect() {
-    this.animate();
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        this.animate();
+      }, 300);
+    });
   }
   animate() {
     gsap.to(this.indigoTarget, {

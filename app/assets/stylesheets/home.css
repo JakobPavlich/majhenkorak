@@ -179,7 +179,10 @@ body::after {
   z-index: 2;
 
   background: url("sprite-drevo.png") no-repeat;
+  background-position: 0 0;
   image-rendering: pixelated;
+  opacity: 1;
+  visibility: visible;
 
   animation: sway 3.2s steps(6) infinite;
 }

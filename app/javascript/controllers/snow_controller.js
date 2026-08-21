@@ -10,25 +10,35 @@ export default class extends Controller {
 
   connect() {
     // const size = gsap.utils.random(1, 3, 0);
-    this.createSnow(this.frontTarget, this.countValue / 2, 4, 8);
-    this.createSnow(this.backTarget, this.countValue / 2, 8, 12);
+    requestAnimationFrame(() => {
+      this.createSnow(this.frontTarget, this.countValue / 2, 4, 8);
+      this.createSnow(this.backTarget, this.countValue / 2, 8, 12);
+    }, 400);
   }
 
   createSnow(container, amount, minSpeed, maxSpeed) {
-    console.log("creating", amount, "flakes");
+    let created = 0;
 
-    for (let i = 0; i < amount; i++) {
-      const flake = document.createElement("div");
+    const createBatch = () => {
+      for (let i = 0; i < 3 && created < amount; i++, created++) {
+        const flake = document.createElement("div");
 
-      flake.classList.add("snowflake");
-      const size = gsap.utils.random(1, 3, 0);
-      flake.style.width = `${size}px`;
-      flake.style.height = `${size}px`;
+        flake.classList.add("snowflake");
+        const size = gsap.utils.random(1, 3, 0);
+        flake.style.width = `${size}px`;
+        flake.style.height = `${size}px`;
 
-      container.appendChild(flake);
+        container.appendChild(flake);
 
-      this.animateFlake(flake, minSpeed, maxSpeed);
-    }
+        this.animateFlake(flake, minSpeed, maxSpeed);
+      }
+
+      if (created < amount) {
+        requestAnimationFrame(createBatch);
+      }
+    };
+
+    createBatch();
   }
 
   animateFlake(flake, minSpeed, maxSpeed) {
