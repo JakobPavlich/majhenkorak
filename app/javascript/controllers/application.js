@@ -7,7 +7,3 @@ application.debug = false;
 window.Stimulus = application;
 
 export { application };
-
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});

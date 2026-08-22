@@ -119,20 +119,8 @@ body::before {
   .ambient-light {
     width: max(50vw, 50vh);
     height: max(50vw, 50vh);
-    filter: blur(30px);
-  }
-  .loaded .ambient-light {
     filter: blur(50px);
-    transition: filter 0.4s;
   }
-}
-.ambient-light {
-  filter: blur(30px);
-}
-
-.loaded .ambient-light {
-  filter: blur(80px);
-  transition: filter 0.4s;
 }
 
 .ambient-light--indigo {
