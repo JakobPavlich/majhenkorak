@@ -17,4 +17,11 @@ class HomesTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "MAJHEN KORAK"
   end
+
+  test ".tree in .korak sta prisotna" do
+    visit root_url
+
+    assert_selector ".tree"
+    assert_selector ".korak"
+  end
 end
