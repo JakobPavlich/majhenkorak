@@ -13,7 +13,7 @@ export default class extends Controller {
     requestAnimationFrame(() => {
       this.createSnow(this.frontTarget, this.countValue / 2, 4, 8);
       this.createSnow(this.backTarget, this.countValue / 2, 8, 12);
-    }, 400);
+    });
   }
 
   createSnow(container, amount, minSpeed, maxSpeed) {

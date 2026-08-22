@@ -9,7 +9,7 @@ export default class extends Controller {
     requestAnimationFrame(() => {
       setTimeout(() => {
         this.animate();
-      }, 300);
+      }, 200);
     });
   }
   animate() {

@@ -117,10 +117,22 @@ body::before {
 }
 @media (max-width: 600px) {
   .ambient-light {
-    /* width: max(60vw, 60vh);
-    height: max(60vw, 60vh); */
-    filter: blur(70px);
+    width: max(50vw, 50vh);
+    height: max(50vw, 50vh);
+    filter: blur(30px);
   }
+  .loaded .ambient-light {
+    filter: blur(50px);
+    transition: filter 0.4s;
+  }
+}
+.ambient-light {
+  filter: blur(30px);
+}
+
+.loaded .ambient-light {
+  filter: blur(80px);
+  transition: filter 0.4s;
 }
 
 .ambient-light--indigo {
@@ -132,7 +144,7 @@ body::before {
 .ambient-light--teal {
   top: -8%;
   right: -15%;
-  background: rgba(200, 230, 32, 0.18);
+  background: rgba(247, 125, 243, 0.18);
 }
 
 .ambient-light--peach {
