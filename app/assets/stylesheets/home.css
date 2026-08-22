@@ -119,7 +119,7 @@ body::before {
   .ambient-light {
     width: max(50vw, 50vh);
     height: max(50vw, 50vh);
-    filter: blur(50px);
+    filter: blur(60px);
   }
 }
 
