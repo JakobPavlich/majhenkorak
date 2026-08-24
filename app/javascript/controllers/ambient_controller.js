@@ -11,13 +11,13 @@ export default class extends Controller {
         this.animate();
       }, 200);
     });
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      gsap.delayedCall(0.4, () => {
-        gsap.set(".ambient-light", {
-          filter: "blur(60px)",
-        });
-      });
-    }
+    // if (window.matchMedia("(max-width: 600px)").matches) {
+    //   gsap.delayedCall(0.4, () => {
+    //     gsap.set(".ambient-light", {
+    //       filter: "blur(60px)",
+    //     });
+    //   });
+    // }
   }
   animate() {
     gsap.to(this.indigoTarget, {

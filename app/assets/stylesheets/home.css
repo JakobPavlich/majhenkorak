@@ -110,16 +110,16 @@ body::before {
 
 .ambient-light {
   position: absolute;
-  width: max(40vw, 40vh);
-  height: max(40vw, 40vh);
+  width: max(50vw, 50vh);
+  height: max(50vw, 50vh);
   border-radius: 50%;
   filter: blur(80px);
 }
 @media (max-width: 600px) {
   .ambient-light {
-    width: max(50vw, 50vh);
-    height: max(50vw, 50vh);
-    filter: blur(35px);
+    width: max(30vw, 30vh);
+    height: max(30vw, 30vh);
+    filter: blur(50px);
   }
 }
 
