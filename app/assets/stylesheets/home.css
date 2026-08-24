@@ -110,8 +110,8 @@ body::before {
 
 .ambient-light {
   position: absolute;
-  width: max(60vw, 60vh);
-  height: max(60vw, 60vh);
+  width: max(40vw, 40vh);
+  height: max(40vw, 40vh);
   border-radius: 50%;
   filter: blur(80px);
 }
@@ -119,7 +119,7 @@ body::before {
   .ambient-light {
     width: max(50vw, 50vh);
     height: max(50vw, 50vh);
-    filter: blur(60px);
+    filter: blur(35px);
   }
 }
 
@@ -149,17 +149,26 @@ body::after {
 
   pointer-events: none;
 
-  background: white;
+  /* background: white; */
   opacity: 0.05;
   mix-blend-mode: soft-light;
 
-  filter: url("#noise");
+  background: url("noise.webp") repeat;
 }
 .tree-scene {
   position: relative;
   width: 180px;
   height: 300px;
   margin-inline: auto;
+  animation: fade-in 3s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .snow-front,
@@ -186,6 +195,7 @@ body::after {
 
   animation: sway 3.2s steps(6) infinite;
 }
+
 .korak {
   position: absolute;
 
