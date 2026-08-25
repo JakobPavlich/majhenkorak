@@ -110,35 +110,58 @@ body::before {
 
 .ambient-light {
   position: absolute;
-  width: max(50vw, 50vh);
-  height: max(50vw, 50vh);
+  width: max(60vw, 60vh);
+  height: max(60vw, 60vh);
   border-radius: 50%;
-  filter: blur(80px);
+  /* filter: blur(30px); */
+  /* background: radial-gradient(
+    circle,
+    rgba(100, 80, 255, 0.5) 0%,
+    rgba(100, 80, 255, 0) 70%
+  ); */
 }
 @media (max-width: 600px) {
   .ambient-light {
     width: max(30vw, 30vh);
     height: max(30vw, 30vh);
-    filter: blur(50px);
+    /* filter: blur(50px); */
   }
 }
 
 .ambient-light--indigo {
   top: -10%;
   left: -15%;
-  background: rgba(184, 70, 229, 0.28);
+  background: radial-gradient(
+    circle,
+    rgba(184, 70, 229, 0.28) 0%,
+    rgba(184, 70, 229, 0.18) 25%,
+    rgba(184, 70, 229, 0.06) 50%,
+    rgba(184, 70, 229, 0) 75%
+  );
 }
 
 .ambient-light--teal {
   top: -8%;
   right: -15%;
-  background: rgba(247, 125, 243, 0.18);
+  background: radial-gradient(
+    circle,
+    rgba(247, 125, 243, 0.18) 0%,
+    rgba(247, 125, 243, 0.12) 25%,
+    rgba(247, 125, 243, 0.04) 50%,
+    rgba(247, 125, 243, 0) 75%
+  );
 }
 
 .ambient-light--peach {
   bottom: -10%;
   left: 25%;
-  background: rgba(118, 136, 160, 0.3);
+  background: radial-gradient(
+    circle,
+    rgba(118, 136, 160, 0.3) 0%,
+    rgba(118, 136, 160, 0.18) 25%,
+    rgba(118, 136, 160, 0.06) 50%,
+    rgba(118, 136, 160, 0) 75%
+  );
 }
 
 body::after {
@@ -268,3 +291,14 @@ body::after {
 .turbo-progress-bar {
   background-color: rgb(253, 254, 253);
 }
+
+/* * {
+  filter: none !important;
+  backdrop-filter: none !important;
+  mix-blend-mode: normal !important;
+} */
+
+/* * {
+  animation: none !important;
+  transition: none !important;
+} */
