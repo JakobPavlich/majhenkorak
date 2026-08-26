@@ -12,11 +12,23 @@ export default class extends Controller {
     const naprej = document.getElementById("naprej");
     const nazaj = document.getElementById("nazaj");
     const vijuga = document.getElementById("vijuga");
+    const krog = document.getElementById("mali_krog");
+    const kvadrat = document.getElementById("kvadrat");
+
+    this.tl = gsap.timeline({ paused: true });
+    this.tl
+      .to(vijuga, { duration: 1, drawSVG: "0%", ease: "power1.inOut" })
+      .to(kvadrat, {
+        morphSVG: krog,
+        duration: 2,
+        ease: "bounce.in",
+      });
+
     naprej.onclick = () => {
-      gsap.to(vijuga, { duration: 1, drawSVG: "0%", ease: "power1.inOut" });
+      this.tl.play();
     };
     nazaj.onclick = () => {
-      gsap.to(vijuga, { duration: 1, drawSVG: "100%", ease: "power1.inOut" });
+      this.tl.reverse();
     };
   }
 }
