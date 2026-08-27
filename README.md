@@ -13,4 +13,4 @@ I was also learning setting up the server, getting a domain, figuring out what D
 
 It lives [up here](https://www.majhenkorak.si/)
 
-I don't recommend anyone to clone this repo, I can't quite see how it would be useful that way and I also don't yet understand all the ins and outs yet :blush:
+I don't recommend anyone to clone this repo, I can't quite see how it would be useful that way and I also don't understand all the ins and outs yet :blush:
