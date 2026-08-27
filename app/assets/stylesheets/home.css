@@ -277,15 +277,33 @@ body::after {
 .link {
   position: relative;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: aliceblue;
-  width: 180px;
+
   /* margin-left: -20px; */
 }
+.link2 {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: aliceblue;
+  width: 180px;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: hsla(243, 75%, 89%, 0.214);
+  border-radius: 5px;
 
-.link:active,
-.link:hover {
+  /* margin-left: -20px; */
+}
+.povezave {
+  position: relative;
+  margin-top: 30px;
+}
+
+.link2:active,
+.link2:hover {
   color: rgb(59, 170, 218);
+  background-color: hsla(243, 15%, 48%, 0.214);
 }
 
 .turbo-progress-bar {

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#home"
   get "/1" => "pages#korak1"
+  get "/2" => "pages#korak2"
 end

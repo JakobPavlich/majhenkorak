@@ -4,4 +4,6 @@ class PagesController < ApplicationController
   def korak1
     @post = Post.last
   end
+  def korak2
+  end
 end
