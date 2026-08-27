@@ -1,26 +1,16 @@
 # Majhen Korak (small step)
 
-An small Ruby on Rails application built as my first Boot.dev project. :computer: :seedling: :balloon:
-
-It lives [up here](https://www.majhenkorak.si/)
-
 ![screenshot](app/assets/images/screenshot1.jpg)
 
-## Stack
+An small Ruby on Rails application built as my first Boot.dev project. :computer: :seedling: :balloon:
 
-- Ruby
-- Rails
-- PostgreSQL (no database in use yet :blush: Only an experimental one in the background)
-- Hotwire
-- also am trying out GSAP with npm. A bit complicated but I enjoy also the visual side, so it is nice to experiment.
+So far it is a website with only three basic pages.
+On them there are my attempts at learning animation.
+Both pixel-art animation with sprite sheets, and SVG animations. I have mainly drawn the assets myself and hope to continue to improve now that I understand the basic setup.
+I animated with CSS and GSAP.
 
-## Personal playground
+I was also learning setting up the server, getting a domain, figuring out what DNS is, using Docker and Kamal for the first time...
 
-For the time being this is just a place to try out some of the stuff I learned so far, and not yet a polished app with a specific purpose :blush:
-
-So far just setting up the server, getting a domain, figuring out what DNS is, using Docker and Kamal for the first time...trying also to draw sprites for the first time and animating them...
-learning CSS animations, radial-gradients...
-
-I made my first SVGs. For favicon, and also animating others with GSAP.
+It lives [up here](https://www.majhenkorak.si/)
 
 I don't recommend anyone to clone it, I can't quite see how it would be useful that way.
