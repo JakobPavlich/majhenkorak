@@ -9,6 +9,7 @@ export default class extends Controller {
     const zadnjiOblak = document.getElementById("oblak_zadaj");
     const zakasnelOblak = document.getElementById("oblak_zamik");
     const napredniOblak = document.getElementById("path506");
+    const enkratniOblak = document.getElementById("oblak_enkrat");
 
     gsap.to(zadnjiOblak, {
       x: 600,
@@ -33,6 +34,11 @@ export default class extends Controller {
       x: 600,
       y: -18,
       duration: 30,
+    });
+    gsap.to(enkratniOblak, {
+      x: 600,
+      y: -28,
+      duration: 35,
     });
   }
 }
