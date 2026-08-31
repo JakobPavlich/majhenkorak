@@ -17,7 +17,12 @@ export default class extends Controller {
 
     this.tl = gsap.timeline({ paused: true });
     this.tl
-      .to(vijuga, { duration: 1, drawSVG: "0%", ease: "power1.inOut" })
+      .to(vijuga, {
+        duration: 1,
+        drawSVG: "0%",
+        ease: "power1.inOut",
+        stroke: "hsla(315 60.8% 59% / 0.77)",
+      })
       .to(kvadrat, {
         morphSVG: krog,
         duration: 2,
