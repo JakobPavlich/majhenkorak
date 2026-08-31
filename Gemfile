@@ -74,3 +74,5 @@ gem "jsbundling-rails", "~> 1.3"
 gem "rubocop", "~> 1.89"
 gem "rubocop-rails", "~> 2.37"
 gem "rubocop-performance", "~> 1.27"
+
+gem "erbfmt", "~> 0.3.1", group: :development, require: false
