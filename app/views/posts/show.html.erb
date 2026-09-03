@@ -1,9 +1,12 @@
-<ul>
-  <li><strong>PostsBoard</strong></li>
-  <li><%= link_to "All posts", posts_path %></li>
-</ul>
-<ul>
-  <li><%= link_to "Post a post", new_post_path %></li>
-</ul>
+<div class="posts">
+  <div class="post-nav">
+    <ul>
+      <li><strong>Objave</strong></li>
+      <li><%= link_to "Vse objave", posts_path %></li>
+      <li><%= link_to "Nova objava", new_post_path %></li>
+    </ul>
+  </div>
 
-<h1><%= @post.title %> with <%= @post.label %></h1>
+  <h1><%= @post.title %></h1>
+  <div class="label"><%= @post.label %></div>
+</div>

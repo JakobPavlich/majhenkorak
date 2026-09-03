@@ -1,0 +1,57 @@
+.posts {
+  background-color: hsla(193, 88%, 13%, 0.379);
+  border-radius: 20px;
+  border: rgba(245, 245, 245, 0.198), 1px, solid;
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+.posts a {
+  color: bisque;
+  text-decoration: none;
+  border: rgba(245, 245, 245, 0.526), 1px, solid;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: hsla(191, 24%, 61%, 0.232);
+  font-size: 1rem;
+}
+
+.posts a:hover,
+a:active {
+  background-color: hsla(190, 24%, 61%, 0.496);
+}
+
+.posts h1 {
+  font-size: 2.5rem;
+}
+
+hr {
+  width: 75px;
+  border-color: rgb(220, 169, 245);
+}
+
+.posts h1 {
+     font-family: "Bitcount Prop Single", system-ui, sans-serif;
+     padding: 5px;
+     margin: 5px;
+}
+
+.label {
+    position: relative;
+    text-align: right;
+    padding: 5px;
+    padding-right: 30px;
+    background-color: rgba(249, 196, 255, 0.191);
+}
+
+.post-nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.post-nav li:last-child {
+    margin-left: auto;
+}
