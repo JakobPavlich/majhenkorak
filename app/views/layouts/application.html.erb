@@ -12,40 +12,16 @@
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg?v=2" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%# <%= javascript_importmap_tags %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
-    <%# <svg
-      width="0"
-      height="0"
-      style="position: absolute"
-      aria-hidden="true"
-    >
-      <filter id="noise">
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.8"
-          numOctaves="1"
-          stitchTiles="stitch"
-        />
-        <feColorMatrix type="saturate" values="0" />
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="3" intercept="-1" />
-          <feFuncG type="linear" slope="3" intercept="-1" />
-          <feFuncB type="linear" slope="3" intercept="-1" />
-        </feComponentTransfer>
-      </filter>
-    </svg> %>
     <div class="ambient-background" data-controller="ambient">
       <div class="ambient-light ambient-light--indigo" data-ambient-target="indigo"></div>
       <div class="ambient-light ambient-light--teal" data-ambient-target="teal"></div>
@@ -53,6 +29,8 @@
     </div>
     <div class="background">
       <div class="wrapper">
+        <%= tag.div notice, style: "color:green;" if notice %>
+        <%= tag.div alert, style: "color:red;" if alert %>
         <%= yield %>
       </div>
     </div>
