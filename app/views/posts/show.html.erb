@@ -6,7 +6,8 @@
       <li><%= link_to "Nova objava", new_post_path %></li>
     </ul>
   </div>
-
-  <h1><%= @post.title %></h1>
-  <div class="label"><%= @post.label %></div>
+  <div class="post-title">
+    <h1><%= @post.title %></h1>
+    <div class="label"><%= @post.label %></div>
+  </div>
 </div>
