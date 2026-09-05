@@ -38,7 +38,6 @@ hr {
   padding-top: 40px;
 }
 
-
 .posts h3 {
   font-family: "Bitcount Prop Single", system-ui, sans-serif;
   padding-top: 0;
@@ -62,6 +61,7 @@ hr {
   background-color: rgba(249, 196, 255, 0.564);
   top: 0;
   left: 0;
+  border-radius: 3px;
 }
 
 .post-nav ul {
@@ -83,9 +83,48 @@ hr {
   border-radius: 10px;
 }
 
-form {
+.post-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
+  display: grid;
+  gap: 1lh;
+  border: solid 1px rgba(245, 222, 179, 0.196);
+  background-color: rgba(155, 238, 238, 0.165);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 30ch;
+  input {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 0;
+    background: wheat;
+  }
+  input::placeholder {
+    color: #9f9f9f;
+    opacity: 1; /* Fixes faded look in Firefox */
+  }
+}
+.post-button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 3px solid transparent;
+}
+
+.post-button:hover,
+.post-button:focus-visible {
+  background: white;
+  color:darkcyan;
+}
+
+.objava-seznam {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.25rem;
 }
