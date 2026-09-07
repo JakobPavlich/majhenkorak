@@ -1,6 +1,12 @@
 <div class="posts">
+  <div class="post-nav">
+    <ul>
+      <li><h3>Objave</h3><li>
+      <li><%= link_to "Nova objava", new_post_path %></li>
+    </ul>
+  </div>
   <div class="seznam-objav">
-    <h1>Objave</h1>
+    <!-- <h1>Objave</h1> -->
     <%= render @posts %>
   </div>
 </div>

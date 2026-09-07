@@ -42,6 +42,8 @@ hr {
   font-family: "Bitcount Prop Single", system-ui, sans-serif;
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
 }
 
 .posts strong {
@@ -95,7 +97,7 @@ hr {
   background-color: rgba(155, 238, 238, 0.165);
   border-radius: 10px;
   margin: 2rem auto;
-  max-width: 30ch;
+  max-width: 40ch;
   input {
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
@@ -112,6 +114,7 @@ hr {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: 3px solid transparent;
+  color: rgb(91, 5, 86);
 }
 
 .post-button:hover,
@@ -120,8 +123,14 @@ hr {
   color:darkcyan;
 }
 
+input,
+button {
+  font: inherit;
+}
+
 .objava-seznam {
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 .form-group {
