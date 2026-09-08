@@ -5,8 +5,14 @@
       <li><%= link_to "Nova objava", new_post_path %></li>
     </ul>
   </div>
-  <div class="post-title">
+
+  <div class="objava">
     <h1><%= @post.title %></h1>
+    <p><%= @post.favnumber %> - <%= @post.region %></p>
     <div class="label"><%= @post.label %></div>
+    <div class="urejaj"><%= link_to "urejaj", edit_post_path(@post) %></div>
+
+    <%= link_to "Spletna stran", URI.parse(@post.apply_url).to_s if @post.apply_url? %>
+    <%= mail_to @post.apply_email, "Mail", role: :button  if @post.apply_email? %>
   </div>
 </div>
