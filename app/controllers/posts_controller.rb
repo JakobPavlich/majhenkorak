@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [ :show, :edit, :update, :destroy ]
+
   def index
     @posts = Post.all
   end
@@ -20,9 +22,32 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to @post, notice: "Objava je bila uspešno spremenjena"
+    else
+      render :edit, status: :unprocessable_content
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice: "Objava je bila izbrisana"
+  end
+
+
   private
 
   def post_params
     params.expect(post: [ :title, :label, :favnumber, :region, :apply_url, :apply_email ])
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to posts_path
   end
 end

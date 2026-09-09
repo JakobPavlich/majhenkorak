@@ -1,43 +1,9 @@
 <div class="posts">
-   <div class="post-nav">
+  <div class="post-nav">
     <ul>
       <li><h3>Objavi objavo</h3></li>
       <li><%= link_to "Vse objave", posts_path %></li>
     </ul>
   </div>
-
-  <div class="post-form">
-    <%= form_with model: @post do |form| %>
-      <%= render "errors", form: form %>
-
-      <div class="form-group">
-        <%= form.label :title %> <%= form.text_field :title, placeholder: "dont know", required: true %>
-      </div>
-
-      <div class="form-group">
-        <%= form.label :label %> <%= form.text_field :label, placeholder: "also dont know", required: true %>
-      </div>
-
-      <div class="form-group">
-        <%= form.label :favnumber %> <%= form.number_field :favnumber,
-      placeholder: "7", required: true %>
-      </div>
-
-      <div class="form-group">
-        <%= form.label :region %> <%= form.text_field :region, placeholder: "still dont know", required: true %>
-      </div>
-
-      <div class="form-group">
-        <%= form.label :apply_url %> <%= form.url_field :apply_url, placeholder:
-      "url" %>
-      </div>
-
-      <div class="form-group">
-        <%= form.label :apply_email %> <%= form.email_field :apply_email,
-      placeholder: "email" %>
-      </div>
-
-      <div><%= form.submit "Shrani", class: "post-button" %></div>
-    <% end %>
-  </div>
+  <%= render "form", post: @post %>
 </div>

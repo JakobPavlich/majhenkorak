@@ -1,0 +1,17 @@
+<div class="posts">
+  <div class="post-nav">
+    <ul>
+      <li><h3>Urejaj objavo</h3></li>
+      <li><%= link_to "Vse objave", posts_path %></li>
+    </ul>
+  </div>
+  <%= render "form", post: @post %>
+
+  <h3>Izbriši objavo</h3>
+  <%= button_to "izbris",
+  post_path(@post),
+  method: :delete,
+  data: {
+    turbo_confirm: "A si zihr?",
+  } %>
+</div>
