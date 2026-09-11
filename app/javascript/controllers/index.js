@@ -5,8 +5,10 @@ import AmbientController from "./ambient_controller";
 import SnowController from "./snow_controller";
 import PracticeController from "./practice_controller";
 import CloudController from "./cloud_controller";
+import ToastController from "./toast_controller.js";
 
 application.register("ambient", AmbientController);
 application.register("snow", SnowController);
 application.register("practice", PracticeController);
 application.register("cloud", CloudController);
+application.register("toast", ToastController);

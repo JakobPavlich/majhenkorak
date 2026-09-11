@@ -18,7 +18,9 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <%= javascript_include_tag "application",
+    "data-turbo-track": "reload",
+    type: "module" %>
   </head>
 
   <body>
@@ -29,8 +31,16 @@
     </div>
     <div class="background">
       <div class="wrapper">
-        <%= tag.div notice, style: "color:green;" if notice %>
-        <%= tag.div alert, style: "color:red;" if alert %>
+        <% if notice.present? %>
+          <div data-controller="toast" class="toast toast--notice">
+            <%= notice %>
+          </div>
+        <% end %>
+        <% if alert.present? %>
+          <div data-controller="toast" class="toast--notice toast">
+            <%= alert %>
+          </div>
+        <% end %>
         <%= yield %>
       </div>
     </div>

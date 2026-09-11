@@ -19,7 +19,7 @@
 
 .posts a:hover,
 a:active {
-  background-color: hsla(190, 24%, 61%, 0.496);
+  background-color: #7892bf8e;
 }
 
 hr {
@@ -149,4 +149,95 @@ button {
 .form-group {
   display: grid;
   gap: 0.25rem;
+}
+
+.notice {
+  position: relative;
+  margin-inline: auto;
+  top: 1rem;
+  z-index: 1000;
+
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+
+  background: #1f2937;
+  color: white;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+  position: relative;
+  margin-inline: auto;
+  top: 1rem;
+  z-index: 1000;
+
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+
+  background: #1f2937;
+  color: brown;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.toast {
+  position: fixed;
+  top: 3vh;
+  left: 50%;
+  z-index: 1000;
+
+  transform: translateX(-50%);
+
+  width: max-content;
+  max-width: min(24rem, calc(100vw - 2rem));
+
+  padding: 0.9rem 1.2rem;
+
+  border-radius: 0.75rem;
+
+  font-size: 0.95rem;
+  line-height: 1.4;
+
+  box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+
+  animation: toast-in 0.3s ease-out;
+}
+
+.toast--notice {
+  background: #e6f7ed;
+  color: #185c37;
+}
+
+.toast--alert {
+  background: #fde8e8;
+  color: #8a2020;
+}
+
+.toast--out {
+  animation: toast-out 0.3s ease-in forwards;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -0.5rem);
+  }
 }
