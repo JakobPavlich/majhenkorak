@@ -7,4 +7,11 @@ class Post < ApplicationRecord
   def has_apply_method
     errors.add(:base, "Please provide an apply URL or email") unless apply_url? || apply_email?
   end
+
+  # to_param :title
+  # to_param :title_and_label
+
+  def to_param
+  [ id, title, "iz oznake", label ].join("-").parameterize
+  end
 end
