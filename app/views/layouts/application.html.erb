@@ -21,6 +21,13 @@
     <%= javascript_include_tag "application",
     "data-turbo-track": "reload",
     type: "module" %>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+      nonce="<%= request.content_security_policy_nonce %>"
+    >
+    </script>
   </head>
 
   <body>
