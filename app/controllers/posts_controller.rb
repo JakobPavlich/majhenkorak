@@ -1,3 +1,6 @@
+require "net/http"
+require "json"
+
 class PostsController < ApplicationController
   before_action :set_post, only: [ :show, :edit, :update, :destroy ]
 
@@ -15,7 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    if turnstile_valid? && @post.save
       redirect_to @post, notice: "Objava je bila objavljena"
     else
       render :new, status: :unprocessable_content
@@ -40,6 +43,23 @@ class PostsController < ApplicationController
 
 
   private
+
+  def turnstile_valid?
+    token = params["cf-turnstile-response"]
+
+    return false if token.blank?
+    uri = URI("https://challenges.cloudflare.com/turnstile/v0/siteverify")
+
+    response = Net::HTTP.post_form(
+        uri,
+        {
+          "secret" => ENV.fetch("TURNSTILE_SECRET_KEY"),
+          "response" => token
+        }
+    )
+
+    JSON.parse(response.body)["success"] == true
+  end
 
   def post_params
     params.expect(post: [ :title, :label, :favnumber, :region, :apply_url, :apply_email ])
