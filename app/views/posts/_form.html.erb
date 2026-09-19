@@ -1,5 +1,5 @@
 <div class="post-form">
-  <%= form_with model: post do |form| %>
+  <%= form_with model: post, data: {turbo: false} do |form| %>
     <%= render "errors", form: form %>
 
     <div class="form-group">
