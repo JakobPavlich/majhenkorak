@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  has_rich_text :description
   validates :title, :label, :favnumber, :region, presence: true
   # validates :apply_url, presence: true, unless: :apply_email?
   # validates :apply_email, presence: true, unless: :apply_url?

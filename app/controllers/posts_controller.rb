@@ -67,7 +67,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.expect(post: [ :title, :label, :favnumber, :region, :apply_url, :apply_email ])
+    params.expect(post: [ :title, :label, :favnumber, :region, :apply_url, :apply_email, :description ])
   end
 
   def set_post
