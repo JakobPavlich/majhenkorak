@@ -20,13 +20,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     unless turnstile_valid?
-      @post.errors.add(
-        :base, "Preverjanje Turnstile ni uspelo. Poiskusite znova."
-      )
-
+      flash.now[:alert] = "Preverjanje Turnstile ni uspelo. Poskusite znova."
       return render :new, status: :unprocessable_content
     end
-
     if @post.save
       redirect_to @post, notice: "Objava je bila objavljena"
     else
