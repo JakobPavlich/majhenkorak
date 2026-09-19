@@ -18,7 +18,16 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if turnstile_valid? && @post.save
+
+    unless turnstile_valid?
+      @post.errors.add(
+        :base, "Preverjanje Turnstile ni uspelo. Poiskusite znova."
+      )
+
+      return render :new, status: :unprocessable_content
+    end
+
+    if @post.save
       redirect_to @post, notice: "Objava je bila objavljena"
     else
       render :new, status: :unprocessable_content
