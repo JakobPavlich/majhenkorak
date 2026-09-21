@@ -47,14 +47,22 @@ hr {
   /* font-size: 1.6rem; */
 }
 .objava {
+  text-align: left;
+  padding-left: 20px;
   position: relative;
   margin-top: 20px;
   background-color: hsla(191, 83%, 9%, 0.496);
-  padding: 5px;
   padding-bottom: 30px;
   border-radius: 10px;
 }
 
+.objava h1 {
+  text-align: center;
+}
+
+.description > * {
+  padding-block: 25px;
+}
 .label {
   position: absolute;
   padding: 3px;
@@ -146,6 +154,11 @@ hr {
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
+}
+
+.post-form trix-toolbar .trix-button-row {
+  flex-wrap: wrap;
+  height: auto;
 }
 
 .post-form .cf-turnstile {

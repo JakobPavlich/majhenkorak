@@ -11,6 +11,9 @@
     <p><%= @post.favnumber %>
       -
       <%= @post.region %></p>
+    <div class="description">
+      <%= @post.description %>
+    </div>
     <div class="label"><%= @post.label %></div>
     <div class="urejaj"><%= link_to "urejaj", edit_post_path(@post) %></div>
 
