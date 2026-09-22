@@ -53,7 +53,6 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "erb_lint", require: false
 
   gem "ruby-lsp", require: false
 end
@@ -74,5 +73,3 @@ gem "jsbundling-rails", "~> 1.3"
 gem "rubocop", "~> 1.89"
 gem "rubocop-rails", "~> 2.37"
 gem "rubocop-performance", "~> 1.27"
-
-gem "erbfmt", "~> 0.3.1", group: :development, require: false
