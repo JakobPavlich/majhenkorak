@@ -48,7 +48,7 @@ hr {
 }
 .objava {
   text-align: left;
-  padding-left: 20px;
+  padding-inline: 20px;
   position: relative;
   margin-top: 20px;
   background-color: hsla(191, 83%, 9%, 0.496);
@@ -58,6 +58,12 @@ hr {
 
 .objava h1 {
   text-align: center;
+  padding-top: 50px;
+}
+
+.description a {
+  padding: 2px;
+  border-radius: 0px;
 }
 
 .description > * {

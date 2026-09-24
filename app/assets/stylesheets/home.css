@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Playwrite";
-  src: local(Playwrite), url(pisano-zvezek.woff2);
-  font-display: swap;
-}
-@font-face {
   font-family: "Bitcount Prop Single";
   src: url("BitcountPropSingle-300.woff2") format("woff2");
   font-weight: 300;
@@ -244,11 +239,6 @@ body::after {
     background-position: -1440px 0;
   }
 }
-
-/* .korak:hover,
-.korak:active {
-  background: url("korak-hover.png") no-repeat;
-} */
 
 .snow-front {
   z-index: 3;
