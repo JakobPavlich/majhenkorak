@@ -1,6 +1,13 @@
 <div class="posts">
   <div class="post-nav">
     <ul>
+      <% if authenticated? %>
+        <%= button_to "Odjava", session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Prijava", new_session_path %>
+      <% end %>
+    </ul>
+    <ul>
       <li><h3>Objave</h3></li>
       <li><%= link_to "Nova objava", new_post_path %></li>
     </ul>

@@ -2,6 +2,7 @@ require "net/http"
 require "json"
 
 class PostsController < ApplicationController
+  allow_unauthenticated_access only: [ :index, :show ]
   before_action :set_post, only: [ :show, :edit, :update, :destroy ]
 
   def index

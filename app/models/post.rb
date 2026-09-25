@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  belongs_to :user, optional: true
+
   has_rich_text :description
   validates :title, :label, :favnumber, :region, presence: true
   # validates :apply_url, presence: true, unless: :apply_email?
