@@ -4,6 +4,7 @@
       <% if authenticated? %>
         <%= button_to "Odjava", session_path, method: :delete %>
       <% else %>
+        <%= link_to "Registracija", new_registration_path %>
         <%= link_to "Prijava", new_session_path %>
       <% end %>
     </ul>
