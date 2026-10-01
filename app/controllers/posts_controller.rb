@@ -3,7 +3,7 @@ require "json"
 
 class PostsController < ApplicationController
   allow_unauthenticated_access only: [ :index, :show ]
-  before_action :set_post, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_post, only: [ :edit, :update, :destroy ]
 
   def index
     @posts = Post.all
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Current.user.posts.new(post_params)
 
     unless turnstile_valid?
       flash.now[:alert] = "Preverjanje Turnstile ni uspelo. Poskusite znova."
@@ -72,7 +72,7 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Current.user.posts.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to posts_path
   end

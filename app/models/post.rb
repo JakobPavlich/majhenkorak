@@ -17,4 +17,8 @@ class Post < ApplicationRecord
   def to_param
   [ id, title, "iz oznake", label ].join("-").parameterize
   end
+
+  def owner?
+    user_id? && user == Current.user
+  end
 end
