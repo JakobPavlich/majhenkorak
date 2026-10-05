@@ -21,5 +21,6 @@
     <% if @posts.none? %>
       <%= image_tag "sprite-drevo.png", alt: "drevo" %>
     <% end %>
+    <%= content_for :footer, render("subscribers/form") %>
   </div>
 </div>

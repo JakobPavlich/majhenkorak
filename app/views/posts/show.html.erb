@@ -19,5 +19,6 @@
 
     <%= link_to "Spletna stran", URI.parse(@post.apply_url).to_s if @post.apply_url? %>
     <%= mail_to @post.apply_email, "Mail", role: :button if @post.apply_email? %>
+    <%= content_for :footer, render("subscribers/form") %>
   </div>
 </div>

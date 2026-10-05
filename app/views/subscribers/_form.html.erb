@@ -1,0 +1,11 @@
+<article>
+  <%= turbo_frame_tag :subscribe_form do %>
+    <h6>Lahko ti pošljemo objave v nabiralnik</h6>
+    <%= form_with model: Subscriber.new do |form| %>
+      <fieldset role="group">
+        <%= form.email_field :email, placeholder: "ti@primer.si", required: true %>
+        <%= form.submit "Naroči se" %>
+      </fieldset>
+    <% end %>
+  <% end %>
+</article>
