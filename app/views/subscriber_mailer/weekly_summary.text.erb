@@ -1,0 +1,10 @@
+Nove objave ta tedn
+<% params[:posts].each do |post| %>
+  <%= post.title %>
+  -
+  <%= post.label %>
+  <%= post.favnumber %>
+  -
+  <%= post.region %>
+  <%= post_url(post) %>
+<% end %>

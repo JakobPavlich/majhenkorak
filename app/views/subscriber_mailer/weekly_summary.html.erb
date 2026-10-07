@@ -1,0 +1,17 @@
+<h1>Nove objave ta tedn</h1>
+
+<ul>
+  <% params[:posts].each do |post| %>
+    <li><%= link_to post do %>
+        <%= post.title %>
+        -
+        <%= post.label %>
+      <% end %>
+      <div>
+        <%= post.favnumber %>
+        -
+        <%= post.region %>
+      </div>
+    </li>
+  <% end %>
+</ul>
