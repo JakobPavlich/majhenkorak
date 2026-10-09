@@ -8,3 +8,5 @@ Nove objave ta tedn
   <%= post.region %>
   <%= post_url(post) %>
 <% end %>
+Odjavi se:
+<%= unsubscribe_url(token: params[:subscriber].generate_token_for(:unsubscribe)) %>

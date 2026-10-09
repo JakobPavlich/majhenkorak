@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :subscribers, only: [ :create ]
+  resource :unsubscribe, only: [ :show, :destroy ]
 
   # Defines the root path route ("/")
   # root "posts#index"
