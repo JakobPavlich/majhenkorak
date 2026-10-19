@@ -72,6 +72,6 @@ end
 
 gem "jsbundling-rails", "~> 1.3"
 
-gem "rubocop", "~> 1.89"
+gem "rubocop", "~> 1.92"
 gem "rubocop-rails", "~> 2.37"
 gem "rubocop-performance", "~> 1.27"
